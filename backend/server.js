@@ -22,7 +22,7 @@ connectDB();
 // Security & Middleware
 app.use(helmet({ crossOriginResourcePolicy: false }));
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' ? 'https://rentnest.com' : 'http://localhost:3000',
+  origin: process.env.NODE_ENV === 'production' ? 'https://rent-nest-one.vercel.app' : 'http://localhost:3000',
   credentials: true,
 }));
 app.use(morgan(process.env.NODE_ENV === 'development' ? 'dev' : 'combined'));
