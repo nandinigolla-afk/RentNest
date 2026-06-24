@@ -1,0 +1,48 @@
+.maintenance-page { min-height: 100vh; padding-top: 90px; padding-bottom: 60px; }
+.maint-top-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; gap: 16px; flex-wrap: wrap; }
+.maint-stats { display: flex; gap: 16px; flex-wrap: wrap; }
+.maint-stat { padding: 12px 20px; background: #fff; border-radius: 10px; border: 1px solid var(--border); border-left: 4px solid; display: flex; flex-direction: column; gap: 2px; }
+.maint-stat strong { font-size: 1.5rem; font-family: 'Poppins', sans-serif; }
+.maint-stat span { font-size: 0.8rem; color: var(--text-muted); }
+
+.empty-maint { text-align: center; padding: 80px 20px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.empty-maint span { font-size: 3.5rem; }
+.empty-maint h3 { font-size: 1.4rem; }
+.empty-maint p { color: var(--text-muted); max-width: 320px; }
+
+.maint-requests { display: flex; flex-direction: column; gap: 14px; }
+.maint-card {
+  background: #fff; border-radius: var(--radius); border: 1px solid var(--border);
+  padding: 20px 24px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+  transition: all 0.3s;
+}
+.maint-card:hover { box-shadow: var(--shadow-md); border-color: rgba(108,60,225,0.2); }
+.maint-card-left { display: flex; align-items: flex-start; gap: 16px; flex: 1; min-width: 0; }
+.maint-img { width: 70px; height: 70px; border-radius: 10px; object-fit: cover; flex-shrink: 0; }
+.maint-info { display: flex; flex-direction: column; gap: 4px; }
+.maint-info strong { font-size: 1rem; }
+.maint-info span { font-size: 0.8rem; color: var(--primary); font-weight: 600; }
+.maint-info p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin: 4px 0 0; }
+.admin-note { font-size: 0.82rem; background: rgba(108,60,225,0.06); padding: 8px 12px; border-radius: 8px; border-left: 3px solid var(--primary); margin-top: 6px; }
+.scheduled-date { font-size: 0.82rem; color: var(--accent); font-weight: 500; margin-top: 4px; }
+.maint-card-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex-shrink: 0; }
+.maint-card-right small { font-size: 0.75rem; color: var(--text-muted); }
+
+/* Filter chips reuse */
+.filter-chip {
+  padding: 6px 14px; border-radius: 20px; border: 1.5px solid var(--border);
+  background: transparent; color: var(--text); font-size: 0.82rem; font-weight: 500;
+  cursor: pointer; transition: all 0.2s; font-family: inherit;
+}
+.filter-chip:hover { border-color: var(--primary); color: var(--primary); }
+.filter-chip.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+.modal-close { background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--text-muted); padding: 4px; }
+.modal-close:hover { color: var(--text); }
+
+.btn-spinner { width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.4); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; display: inline-block; }
+
+@media (max-width: 600px) {
+  .maint-card { flex-direction: column; }
+  .maint-card-right { flex-direction: row; justify-content: flex-start; }
+}
